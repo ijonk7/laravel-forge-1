@@ -24,3 +24,7 @@ Route::get('/welcome-2', function () {
 Route::get('/welcome-3', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
